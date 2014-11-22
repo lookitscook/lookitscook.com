@@ -1,12 +1,23 @@
-<core-scroll-header-panel flex>
+<core-scroll-header-panel id="main" flex>
   <core-toolbar>
-    <div>look, it's cook</div>
-  <paper-tabs selected="0">
-
-    <paper-tab>ITEM ONE</paper-tab>
-    <paper-tab>ITEM TWO</paper-tab>
-    <paper-tab>ITEM THREE</paper-tab>
-
+  <a href="{{ site.baseurl }}/" class="logo">
+    <img src="{{ site.baseurl }}/img/cook.svg" alt="Cook">
+  </a>
+  <paper-tabs>
+    <paper-tab><a href="#life" horizontal center-center layout>Life</a></paper-tab>
+    <paper-tab><a href="#projects" horizontal center-center layout>Projects</a></paper-tab>
   </paper-tabs>
   </core-toolbar>
  <div>
+   <script>
+    var logoStyle = document.querySelector('.logo').style;
+    document.querySelector('#main').addEventListener('scroll', function(e) {
+      var t = document.querySelector('#main').scroller.scrollTop;
+      if(t > 200){
+        $('.logo').addClass('over');
+      }else{
+        $('.logo').removeClass('over');
+      }
+    });
+  </script>
+<img id="logo" src="{{ site.baseurl }}/img/lookitscook.svg" alt="Look, it's Cook">
