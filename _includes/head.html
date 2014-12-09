@@ -10,6 +10,7 @@
 
     <link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic|Noto+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/custom.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -20,5 +21,9 @@
       href="{{ "/bower_components/core-scroll-header-panel/core-scroll-header-panel.html" | prepend: site.baseurl }}">
     <link rel="import"
       href="{{ "/bower_components/paper-tabs/paper-tabs.html" | prepend: site.baseurl }}">
-
+    <script type="text/javascript">
+    window.addEventListener('polymer-ready', function(e) {
+      document.body.className = document.body.className.replace("unresolved","");
+    });
+    </script>
 </head>
