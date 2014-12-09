@@ -12,7 +12,12 @@
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/css/custom.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-
+    <script type="text/javascript">
+    window.addEventListener('polymer-ready', function(e) {
+      console.log("polymer-ready");
+      document.body.className = document.body.className.replace("unresolved","");
+    });
+    </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="{{ "/bower_components/webcomponentsjs/webcomponents.js" | prepend: site.baseurl }}"></script>
     <link rel="import"
@@ -21,9 +26,4 @@
       href="{{ "/bower_components/core-scroll-header-panel/core-scroll-header-panel.html" | prepend: site.baseurl }}">
     <link rel="import"
       href="{{ "/bower_components/paper-tabs/paper-tabs.html" | prepend: site.baseurl }}">
-    <script type="text/javascript">
-    window.addEventListener('polymer-ready', function(e) {
-      document.body.className = document.body.className.replace("unresolved","");
-    });
-    </script>
 </head>
