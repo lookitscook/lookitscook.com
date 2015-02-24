@@ -28,11 +28,12 @@ core-toolbar .logo img{
   width:auto;
 }
 paper-tabs{
-  height:64px;
+  height:100%;
 }
 paper-tab > a, paper-tab > a:visited, paper-tab > a:hover{
   color:$text-color;
   text-decoration:none;
+  text-transform:uppercase;
 }
 paper-tab::shadow #ink{
   color: $text-color;
